@@ -18,7 +18,7 @@ install:
   - export PATH=$PATH:$NEURON_HOME/nrn/x86_64/bin
   - export PYTHONPATH=$PYTHONPATH:$NEURON_HOME/nrn/lib/python/
   - sh build.sh
-  - ./configure --prefix=$NEURON_HOME/nrn --with-nrnpython=python3
+  - ./configure --prefix=$NEURON_HOME/nrn --with-nrnpython=python3 --without-iv
   - make
   - sudo make install
 
