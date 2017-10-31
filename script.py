@@ -15,7 +15,7 @@ h.tstop = 40.0
 h.run()
 # Pickle
 import pickle
-with open('t_vec.p', 'w') as t_vec_file:
+with open('t_vec.p', 'wb') as t_vec_file:
     pickle.dump(t_vec.to_python(), t_vec_file)
-with open('v_vec.p', 'w') as v_vec_file:
+with open('v_vec.p', 'wb') as v_vec_file:
     pickle.dump(v_vec.to_python(), v_vec_file)
