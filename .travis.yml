@@ -19,7 +19,9 @@ install:
   - ./configure --prefix=$NEURON_HOME/nrn --with-nrnpython=python3 --without-iv
   - make
   - sudo make install
+  - cd ..
 
 script: 
   # To do: make python do something more interesting like download a NEURON model and run it.  
   - python -c "import neuron"
+  - python script.py
