@@ -14,8 +14,8 @@ install:
   - export PYTHONHOME=$HOME/miniconda3
   - export NEURON_HOME=/Applications/NEURON-7.5/nrn/x86_64
   - export LD_LIBRARY_PATH=$PYTHONHOME/lib
-  - export PATH=$PATH:$NEURON_HOME/nrn/x86_64/bin
-  - export PYTHONPATH=$PYTHONPATH:$NEURON_HOME/nrn/lib/python/
+  - export PATH=$PATH:$NEURON_HOME/bin
+  - export PYTHONPATH=$PYTHONPATH:$NEURON_HOME/../lib/python/
   - sh build.sh
   - ./configure --prefix=$NEURON_HOME/.. --with-nrnpython=python3 --without-x
   - make
