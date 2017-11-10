@@ -2,8 +2,8 @@ os: osx
 install:
   # ==== Miniconda installation =====
   - curl https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -o miniconda.sh
-  - sh miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
+  - sh miniconda.sh -b -p $HOME/miniconda3
+  - export PATH="$HOME/miniconda3/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
@@ -11,6 +11,7 @@ install:
   # ==== Neuron installation ========
   - git clone https://github.com/nrnhines/nrn.git
   - cd nrn
+  - export PYTHONHOME=$HOME/miniconda3
   - export NEURON_HOME=/Applications/NEURON-7.5/nrn/x86_64
   - export LD_LIBRARY_PATH=$PYTHONHOME/lib
   - export PATH=$PATH:$NEURON_HOME/nrn/x86_64/bin
